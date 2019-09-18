@@ -4,12 +4,17 @@
 #
 Name     : mvn-gradle-kotlin
 Version  : 1
-Release  : 3
+Release  : 4
 URL      : https://plugins.gradle.org/m2/gradle/plugin/org/gradle/kotlin/gradle-kotlin-dsl-plugins/0.12.0/gradle-kotlin-dsl-plugins-0.12.0.jar
 Source0  : https://plugins.gradle.org/m2/gradle/plugin/org/gradle/kotlin/gradle-kotlin-dsl-plugins/0.12.0/gradle-kotlin-dsl-plugins-0.12.0.jar
 Source1  : https://plugins.gradle.org/m2/gradle/plugin/org/gradle/kotlin/gradle-kotlin-dsl-plugins/0.12.0/gradle-kotlin-dsl-plugins-0.12.0.pom
 Source2  : https://plugins.gradle.org/m2/org/gradle/kotlin-dsl/ktlint-convention/org.gradle.kotlin-dsl.ktlint-convention.gradle.plugin/0.3.0/org.gradle.kotlin-dsl.ktlint-convention.gradle.plugin-0.3.0.pom
-Source3  : https://plugins.gradle.org/m2/org/gradle/kotlin/kotlin-dsl/org.gradle.kotlin.kotlin-dsl.gradle.plugin/1.2.9/org.gradle.kotlin.kotlin-dsl.gradle.plugin-1.2.9.pom
+Source3  : https://plugins.gradle.org/m2/org/gradle/kotlin/gradle-kotlin-dsl-conventions/0.3.0/gradle-kotlin-dsl-conventions-0.3.0.jar
+Source4  : https://plugins.gradle.org/m2/org/gradle/kotlin/gradle-kotlin-dsl-conventions/0.3.0/gradle-kotlin-dsl-conventions-0.3.0.pom
+Source5  : https://plugins.gradle.org/m2/org/gradle/kotlin/kotlin-dsl/org.gradle.kotlin.kotlin-dsl.gradle.plugin/1.2.9/org.gradle.kotlin.kotlin-dsl.gradle.plugin-1.2.9.pom
+Source6  : https://plugins.gradle.org/m2/org/gradle/kotlin/kotlin-dsl/org.gradle.kotlin.kotlin-dsl.gradle.plugin/1.2.9/org.gradle.kotlin.kotlin-dsl.gradle.plugin-1.2.9.pom
+Source7  : https://plugins.gradle.org/m2/org/gradle/kotlin/plugins/1.2.9/plugins-1.2.9.jar
+Source8  : https://plugins.gradle.org/m2/org/gradle/kotlin/plugins/1.2.9/plugins-1.2.9.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -41,8 +46,23 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/gradle/plugin/org/gradl
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/gradle/kotlin-dsl/ktlint-convention/org.gradle.kotlin-dsl.ktlint-convention.gradle.plugin/0.3.0
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/gradle/kotlin-dsl/ktlint-convention/org.gradle.kotlin-dsl.ktlint-convention.gradle.plugin/0.3.0/org.gradle.kotlin-dsl.ktlint-convention.gradle.plugin-0.3.0.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/gradle/kotlin/gradle-kotlin-dsl-conventions/0.3.0
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/gradle/kotlin/gradle-kotlin-dsl-conventions/0.3.0/gradle-kotlin-dsl-conventions-0.3.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/gradle/kotlin/gradle-kotlin-dsl-conventions/0.3.0
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/gradle/kotlin/gradle-kotlin-dsl-conventions/0.3.0/gradle-kotlin-dsl-conventions-0.3.0.pom
+
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/gradle/kotlin/kotlin-dsl/org.gradle.kotlin.kotlin-dsl.gradle.plugin/1.2.9
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/gradle/kotlin/kotlin-dsl/org.gradle.kotlin.kotlin-dsl.gradle.plugin/1.2.9/org.gradle.kotlin.kotlin-dsl.gradle.plugin-1.2.9.pom
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/gradle/kotlin/kotlin-dsl/org.gradle.kotlin.kotlin-dsl.gradle.plugin/1.2.9/org.gradle.kotlin.kotlin-dsl.gradle.plugin-1.2.9.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/gradle/kotlin/kotlin-dsl/org.gradle.kotlin.kotlin-dsl.gradle.plugin/1.2.9
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/gradle/kotlin/kotlin-dsl/org.gradle.kotlin.kotlin-dsl.gradle.plugin/1.2.9/org.gradle.kotlin.kotlin-dsl.gradle.plugin-1.2.9.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/gradle/kotlin/plugins/1.2.9
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/gradle/kotlin/plugins/1.2.9/plugins-1.2.9.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/gradle/kotlin/plugins/1.2.9
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/gradle/kotlin/plugins/1.2.9/plugins-1.2.9.pom
 
 
 %files
@@ -53,4 +73,8 @@ cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/gradle/kotlin/kotli
 /usr/share/java/.m2/repository/gradle/plugin/org/gradle/kotlin/gradle-kotlin-dsl-plugins/0.12.0/gradle-kotlin-dsl-plugins-0.12.0.jar
 /usr/share/java/.m2/repository/gradle/plugin/org/gradle/kotlin/gradle-kotlin-dsl-plugins/0.12.0/gradle-kotlin-dsl-plugins-0.12.0.pom
 /usr/share/java/.m2/repository/org/gradle/kotlin-dsl/ktlint-convention/org.gradle.kotlin-dsl.ktlint-convention.gradle.plugin/0.3.0/org.gradle.kotlin-dsl.ktlint-convention.gradle.plugin-0.3.0.pom
+/usr/share/java/.m2/repository/org/gradle/kotlin/gradle-kotlin-dsl-conventions/0.3.0/gradle-kotlin-dsl-conventions-0.3.0.jar
+/usr/share/java/.m2/repository/org/gradle/kotlin/gradle-kotlin-dsl-conventions/0.3.0/gradle-kotlin-dsl-conventions-0.3.0.pom
 /usr/share/java/.m2/repository/org/gradle/kotlin/kotlin-dsl/org.gradle.kotlin.kotlin-dsl.gradle.plugin/1.2.9/org.gradle.kotlin.kotlin-dsl.gradle.plugin-1.2.9.pom
+/usr/share/java/.m2/repository/org/gradle/kotlin/plugins/1.2.9/plugins-1.2.9.jar
+/usr/share/java/.m2/repository/org/gradle/kotlin/plugins/1.2.9/plugins-1.2.9.pom
